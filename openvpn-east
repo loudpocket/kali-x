@@ -1,0 +1,8 @@
+#/bin/bash
+
+service NetworkManager restart
+sleep 1
+cp /etc/resolv.backup /etc/resolv.conf
+service privoxy restart
+cd /home/awsd/openvpn
+openvpn --auth-nocache --config US\ East.ovpn
