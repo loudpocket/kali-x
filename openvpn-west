@@ -2,7 +2,7 @@
 
 service NetworkManager restart
 sleep 1
-cp /etc/resolv.backup /etc/resolv.conf
+./resolv
 service privoxy start
 cd /home/awsd/openvpn
 openvpn --auth-nocache --config US\ West.ovpn
