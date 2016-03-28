@@ -13,10 +13,17 @@ unzip openvpn.zip -d openvpn
 printf "Cleanup...\n"
 rm -rf openvpn.zip
 
+function addPassText {
+for file in openvpn/*.ovpn; do
+	echo "auth-user-pass pass.txt" >> "openvpn/${file##*/}" 
+done
+}
+
 while true; do
         read -p "Do you wish to add an account? [Y/n] " yn
         case $yn in
-                [Yy]* ) printf "Username: ";
+                [Yy]* ) addPassText;
+printf "Username: ";
 read varname;
 printf "Password: "
 read varpass;
