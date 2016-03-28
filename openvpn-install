@@ -22,16 +22,13 @@ done
 while true; do
         read -p "Do you wish to add an account? [Y/n] " yn
         case $yn in
-                [Yy]* ) addPassText;
-printf "Username: ";
-read varname;
-printf "Password: "
-read varpass;
+                [Yy]* ) read -p "Username: " varname; read -p "Password: " varpass;
 if [ "$varname" != "" ] && [ "$varpass" != "" ]; then
 	touch openvpn/pass.txt
 	echo "$varname
 $varpass" > openvpn/pass.txt
 	chmod 600 openvpn/pass.txt
+	addPassText;
 	printf "Complete!\n**WARNING** If you missed typed your account information. You can find the file located at openvpn/pass.txt\n"
 fi;break;;
                 [Nn]* ) printf "Complete!\n"; exit;;
