@@ -1,8 +1,0 @@
-#/bin/bash
-
-service NetworkManager restart
-sleep 1
-./resolv
-service privoxy start
-cd /home/awsd/openvpn
-openvpn --auth-nocache --config US\ West.ovpn
