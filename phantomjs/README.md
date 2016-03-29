@@ -11,9 +11,11 @@ sudo apt-get install build-essential g++ flex bison gperf ruby perl \
 ## Optional
 
 **Recommended
+
 	apt-get install ttf-mscorefonts-installer
 
 Your call
+
 	apt-get install libfontconfig
 
 	apt-get install fontconfig
