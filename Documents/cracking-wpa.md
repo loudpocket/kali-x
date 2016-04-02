@@ -38,5 +38,6 @@ Make a friendly Hashcat file. This will convert pcap into a hccap file.
 
 Hashing with GPU. Watercooling would be nice.
 
-	./oclhashcat-plus64.bin -m 2500 -a 3 <filename>.hccap --gpu-accel=160 --gpu-loops=1024 -1?d ?1?1?1?1?1?1?1?1?1?1
+	cd /usr/share/cudaHashcat
+	./cudahashcat64.bin -m 2500 -a 3 example.hccap --gpu-accel=160 --gpu-loops=1024 -1?d ?1?1?1?1?1?1?1?1?1?1
 
