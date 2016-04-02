@@ -75,3 +75,8 @@ pyrit benchmark
 
 nvcc --version
 
+# cudaHashcat
+
+wget http://hashcat.net/files/cudaHashcat-2.01.7z
+
+
