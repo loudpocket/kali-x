@@ -41,13 +41,6 @@ cat /etc/modprobe.d/nvidia.conf
 cat /etc/modprobe.d/nvidia-blacklists-nouveau.conf
 cat /etc/modprobe.d/nvidia-kernel-common.conf
 
-#rm /etc/X11/xorg.conf
-#reboot
-
-#apt-get remove nvidia-kernel-dkms
-#reboot
-
-
 #
 # http://www.blackmoreops.com/2014/03/13/install-nvidia-driver-kernel-module-cuda-and-pyrit-kali-linux/
 #
@@ -70,7 +63,7 @@ python setup.py build
 python setup.py install
 
 cd ..
-tar -xzf cpyrit-cuda-0.4.0.tar.gz 
+tar -xzf cpyrit-cuda-0.4.0.tar.gz
 cd cpyrit-cuda-0.4.0
 
 python setup.py build
