@@ -1,5 +1,4 @@
-# Nvidia Linux Drivers Cuda Pyrit
-http://docs.kali.org/general-use/install-nvidia-drivers-on-kali-linux
+# Nvidia Linux Drivers
 
 	apt-get update
 	apt-get upgrade
@@ -14,18 +13,18 @@ http://docs.kali.org/general-use/install-nvidia-drivers-on-kali-linux
 
 	glxinfo | grep -i "direct rendering"
 
-
-http://www.blackmoreops.com/2013/10/20/how-to-install-nvidia-kernel-module-cuda-and-pyrit/
+## Nvidia Driver Kernel Module Cuda and Pyrit
 
 	apt-get install mesa-utils
 
-https://developer.nvidia.com/cuda-toolkit
-
+	iceweasel https://developer.nvidia.com/cuda-toolkit
 	service gdm3 stop
 	# CTRL + ALT + F1
+
 	chmod 755 cuda_7.5.18_linux.run
 	./cuda_7.5.18_linux.run
 	reboot
+
 	apt-get install nvidia-xconfig
 	nvidia-xconfig
 	reboot
@@ -40,8 +39,7 @@ https://developer.nvidia.com/cuda-toolkit
 	cat /etc/modprobe.d/nvidia-kernel-common.conf
 
 
-## Cuda and Pyrit
-http://www.blackmoreops.com/2014/03/13/install-nvidia-driver-kernel-module-cuda-and-pyrit-kali-linux/
+## Nvidia Cuda Toolkit Cpyrit and Pyrit
 
 	apt-get install nvidia-cuda-toolkit nvidia-opencl-icd
 
