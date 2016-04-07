@@ -55,7 +55,9 @@ ettercap -p -u -T -q -i {interface}
 	cat ~/sslstrip.log
 
 # wireshark
+	tshark -D
 	dumpcap -i wlan0
+	dumpcap -i 1 -b files:100 -b filesize:30000 -w internet.pcap
 
 # monitor
 	driftnet -i wlan0
